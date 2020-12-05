@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{page_title}}</title>
+</head>
+
+<body>
+    {% for g in greetings %}
+    <div class='greeting'><img src={{g}} alt={{g}}</div>
+    {% endfor%}
+    
+    <p><a href='/'>Home</a></p>
+</body>
+
+</html>
