@@ -18,8 +18,8 @@ def greet_response_handler():
     # if form filled in, greet them using this data
     greet_types = request.args.getlist('greet_type')
     app.logger.info(greet_types)
-    data = get_data.get_reddit_posts()
-    yee =get_data.get_image_list(data)
+    #  print(test.__class__.__name__)
+    yee =get_data.curate_feed(greet_types)
     return render_template('feed.html',page_title="mEmEs",
     greetings=[add_to_card(t) for t in yee])
 

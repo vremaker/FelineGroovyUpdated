@@ -63,6 +63,12 @@
         height:300px;
         width: 300px;
         }
+        label {
+            font-size:25pt;
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto
+        }
     </style>
     <header>
         <h1> Feline Groovy </h1>
@@ -71,10 +77,18 @@
     </header>
 
     <form action="gresponse" method="get">
-        <input type="checkbox" name="greet_type" value="hello" id="hello"/>
-        <label for="hello">MeMeS
+        <input type="checkbox" name="greet_type" value="memes" id="memes"/>
+        <label for="memes">MeMeS
         </label><br />
-
+        <input type="checkbox" name="greet_type" value="cats" id="cats"/>
+        <label for="cats">Cats
+        </label><br />
+        <input type="checkbox" name="greet_type" value="dogs" id="dogs"/>
+        <label for="cats">Dogs
+        </label><br />
+        <input type="checkbox" name="greet_type" value="jokes" id="jokes"/>
+        <label for="cats">Jokes
+        </label><br />
         <input type="submit" value="Go" name="gobtn"/>
     </form>
 </body>

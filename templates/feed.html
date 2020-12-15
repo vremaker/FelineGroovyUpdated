@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 
 <head>
@@ -6,9 +6,95 @@
 </head>
 
 <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Wire+One');
+        html, body {
+        margin:0;
+        padding:0;
+        font-family: 'Wire One', sans-serif;
+        background-color: white;
+        }
+        header {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(190, 200, 239, 0.61);
+        padding-top: 3%;
+        padding-bottom: 2%;
+
+        }
+        main , footer {
+        margin: auto;
+        padding: 0;
+        width: 90%;
+
+        }
+        button  {
+        font-family:  'Wire One', sans-serif;
+        font-weight: bold;
+        font-size: 18pt;
+        width: 200px;
+        height: 40px;
+        margin: 10px;
+        background-color: rgba(190, 200, 239, 0.61);
+        }
+        button:hover {
+        background-color: pink;
+        }
+        header h1{
+        font-family: 'Fascinate Inline', cursive;
+        font-size: 40pt;
+        margin: 0;
+        padding: 0;
+        }
+        header h2 {
+        font-family: 'Wire One', sans-serif;
+        margin-top: -.5em;
+        margin-bottom: 0;
+        font-size: 20pt;
+        }
+        header img {
+        width: 3%;
+        height: 3%;
+        }
+        h3 {
+        font-size: 20pt;
+        }
+        header img {
+        height:200px;
+        width: auto;
+        }
+        .flexy {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            width: 90%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .flexy img {
+            display: block;
+            height:300px;
+            width: auto;
+        }
+    
+    </style>
+    <header>
+        <h1> Feline Groovy </h1>
+        <h2> Stress Relief Right Meow  </h2>
+        <a href="/">
+            <img src="https://raw.githubusercontent.com/vremaker/felineGroovy/master/itACAT.png" />
+        </a>
+    </header>
+    <div class="flexy">
     {% for g in greetings %}
-    <div class='greeting'><img src={{g}} alt={{g}}</div>
+        {% if g.__class__.__name__ == "Photo" %}
+        <img src={{g.img}} alt={{g.alt}}/>
+        {% else %}
+        <p>{{g.joke}} <br /> {{g.punchline}}</p>
+        {%endif%}
     {% endfor%}
+    </div>
     
     <p><a href='/'>Home</a></p>
 </body>
