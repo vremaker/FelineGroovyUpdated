@@ -85,6 +85,11 @@
         <a href="/">
             <img src="https://raw.githubusercontent.com/vremaker/felineGroovy/master/itACAT.png" />
         </a>
+        {%if user == "" %}
+            <p> HI!</p>
+        {%else%}
+            <p> {{user}} </p>
+        {%endif%}
     </header>
     <div class="flexy">
     {% for g in greetings %}
@@ -95,8 +100,6 @@
         {%endif%}
     {% endfor%}
     </div>
-    
-    <p><a href='/'>Home</a></p>
 </body>
 
 </html>
