@@ -74,10 +74,18 @@
             display: block;
             height:300px;
             width: auto;
+            margin:5px;
         }
         #woo {
             width: 100%;
             text-align: center;
+        }
+        .joke {
+            text-align: center;
+            font-size: 30pt;
+            margin:10px;
+            height:300px;
+            width: 300px;
         }
 
     </style>
@@ -98,7 +106,7 @@
         {% if g.__class__.__name__ == "Photo" %}
         <img src={{g.img}} alt={{g.alt}}/>
         {% else %}
-        <p>{{g.joke}} <br /> {{g.punchline}}</p>
+        <p class="joke">{{g.joke}} <br /> {{g.punchline}}</p>
         {%endif%}
     {% endfor%}
     <br />

@@ -39,5 +39,5 @@ if __name__ == "__main__":
     # Used when running locally only.
     # When deploying to Google AppEngine, a webserver process will
     # serve your app.
-    app.run(host="localhost", port=5000, debug=True)
+    app.run()
 
