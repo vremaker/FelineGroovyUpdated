@@ -43,9 +43,12 @@ def get_reddit(sub="memes", baseurl= "https://www.reddit.com/r/"):
         if gotten_json_items is not None:
             for item in gotten_json_items:
                 content = item["data"]["url"]
+                if "gifv" in content:
+                    content = content.replace("gifv", "gif")
                 alt = item["data"]["title"]
                 if not "comments" in content and not "New Official /r/memes Discord Server" in alt:
                     images.append(Photo(content, alt))
+               
             return(images)  
 
 def get_unsplash(query = "cat", limit = 10):
@@ -100,7 +103,7 @@ def curate_feed(prefs=["cats"]):
 if __name__ == '__main__':
     ### Testing your building blocks
     print('\n\nTesting \n------------')
-    feed = curate_feed(["dogs", "cats", "memes", "jokes"])
+    feed = get_reddit()
     for f in feed:
         if f.__class__.__name__ == "Photo":
             print(f.img)

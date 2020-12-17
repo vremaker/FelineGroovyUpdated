@@ -33,12 +33,14 @@
         font-family:  'Wire One', sans-serif;
         font-weight: bold;
         font-size: 18pt;
-        width: 200px;
-        height: 40px;
-        margin: 10px;
+        text-align: center;
+      
+        width: 400px;
         background-color: rgba(190, 200, 239, 0.61);
+        margin-left: auto;
+        margin-right: auto;
         }
-        button:hover {
+        .button:hover {
         background-color: pink;
         }
         header h1{
@@ -53,16 +55,12 @@
         margin-bottom: 0;
         font-size: 20pt;
         }
-        header img {
+        header img, a img  {
         width: 3%;
         height: 3%;
         }
         h3 {
         font-size: 20pt;
-        }
-        header img {
-        height:200px;
-        width: auto;
         }
         .flexy {
             display: flex;
@@ -77,7 +75,11 @@
             height:300px;
             width: auto;
         }
-    
+        #woo {
+            width: 100%;
+            text-align: center;
+        }
+
     </style>
     <header>
         <h1> Feline Groovy </h1>
@@ -99,7 +101,11 @@
         <p>{{g.joke}} <br /> {{g.punchline}}</p>
         {%endif%}
     {% endfor%}
+    <br />
+    <a id="woo" href="/"> <button>home </button> </a>
     </div>
+    
+
 </body>
 
 </html>

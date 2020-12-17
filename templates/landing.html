@@ -57,7 +57,7 @@
         height: 3%;
         }
         h3 {
-        font-size: 20pt;
+        font-size: 40pt;
         }
         img {
         height:300px;
@@ -69,27 +69,58 @@
             margin-left:auto;
             margin-right:auto
         }
+        form { 
+            margin-left:auto;
+            width: 90%;
+            margin-right:auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px;
+            padding: 40px;
+        }
+        .button  {
+            font-family:  'Wire One', sans-serif;
+            font-weight: bold;
+            font-size: 18pt;
+            width: 200px;
+            height: 40px;
+            margin: 10px;
+            background-color: rgba(190, 200, 239, 0.61);
+            }
+
+        .button:hover {
+            background-color: pink;
+            }
+            h3 {
+                text-align: center;
+            }
+        
+
+
     </style>
     <header>
         <h1> Feline Groovy </h1>
         <h2> Stress Relief Right Meow  </h2>
         <img src="https://raw.githubusercontent.com/vremaker/felineGroovy/master/itACAT.png" />
     </header>
-
     <form action="gresponse" method="get">
-        <input type="checkbox" name="greet_type" value="memes" id="memes"/>
-        <label for="memes">MeMeS
-        </label><br />
-        <input type="checkbox" name="greet_type" value="cats" id="cats"/>
-        <label for="cats">Cats
-        </label><br />
-        <input type="checkbox" name="greet_type" value="dogs" id="dogs"/>
-        <label for="cats">Dogs
-        </label><br />
-        <input type="checkbox" name="greet_type" value="jokes" id="jokes"/>
-        <label for="cats">Jokes
-        </label><br />
-        <input type="submit" value="Go" name="gobtn"/>
+        <h3> What Intersts You?</h3>
+        <label><input type="checkbox" name="greet_type" value="memes" id="memes"/>MeMeS</label><br />
+        <label><input type="checkbox" name="greet_type" value="cats" id="cats"/>Cats</label><br />
+        <label><input type="checkbox" name="greet_type" value="dogs" id="dogs"/>Dogs</label><br />
+        <label><input type="checkbox" name="greet_type" value="jokes" id="jokes"/>Jokes</label><br />
+        <label><input type="checkbox" name="greet_type" value="vintage%cameras" id="vintage%cameras"/>vintage cameras</label><br />
+        <label><input type="checkbox" name="greet_type" value="cars" id="cars"/>cars</label><br />
+        <label><input type="checkbox" name="greet_type" value="aardvarks" id="aardvarks"/>aardvarks</label><br />
+        <label><input type="checkbox" name="greet_type" value="eggs" id="eggs"/>eggs</label><br />
+        <label><input type="checkbox" name="greet_type" value="funny" id="funny"/>funny</label><br />
+        <label><input type="checkbox" name="greet_type" value="party" id="party"/>party</label><br />
+        <label><input type="checkbox" name="greet_type" value="cartoon" id="cartoon"/>cartoon</label><br />
+
+
+        <input class="button" type="submit" value="Get a Purr-rated Feed" name="gobtn"/>
     </form>
 </body>
 </html>
